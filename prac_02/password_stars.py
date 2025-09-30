@@ -8,8 +8,8 @@ def main():
 def get_password():
     password = input(f"Enter password (at least {MIN_LENGTH} characters): ")
     while len(password) < 4:
+        print("Password is not long enough")
         password = input(f"Enter password (at least {MIN_LENGTH} characters): ")
-        print(f"Password must be at least {MIN_LENGTH} characters")
     return password
 
 def print_stars(password):
