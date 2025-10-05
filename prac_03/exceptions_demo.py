@@ -9,10 +9,16 @@ Answer the following questions:
 try:
     numerator = int(input("Enter the numerator: "))
     denominator = int(input("Enter the denominator: "))
+    while denominator == 0:
+        print("Cannot divide by 0!!")
+        denominator = int(input("Enter the denominator: "))
     fraction = numerator / denominator
     print(fraction)
 except ValueError:
     print("Numerator and denominator must be valid numbers!")
-except ZeroDivisionError:
-    print("Cannot divide by zero!")
 print("Finished.")
+
+#Questions:
+#Q1: Value error occurs when you enter a character instead of a number
+#Q2: ZeroDivisionError occurs when you try to divide by 0
+#Q3: This can be done by adding a while loop until the denominator does not equal 0
