@@ -19,6 +19,6 @@ except ValueError:
 print("Finished.")
 
 #Questions:
-#Q1: Value error occurs when you enter a character instead of a number
+#Q1: Value error occurs when you enter a non-number instead of a number
 #Q2: ZeroDivisionError occurs when you try to divide by 0
 #Q3: This can be done by adding a while loop until the denominator does not equal 0
