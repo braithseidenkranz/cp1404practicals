@@ -1,7 +1,7 @@
 
 def main():
-    numbers = get_numbers()
-    print_numbers_results(numbers)
+    numbers = get_numbers() # part 1
+    print_numbers_results(numbers) # part 1
 
     check_username() # part 2
 
