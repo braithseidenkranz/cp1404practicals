@@ -9,7 +9,7 @@ def main():
     countries = find_winning_countries(wimbledon_data)
 
     print("Wimbledon Champions: ")
-    max_name_length = max(len(key) for key in champion_to_wins)
+    max_name_length = max(len(name) for name in champion_to_wins)
     for champion, wins in champion_to_wins.items():
         print(f"{champion:{max_name_length}} {wins}")
 
@@ -19,7 +19,7 @@ def main():
 def read_file_records(filename):
     """Read the CSV file and return a list of lists"""
     with open(filename, "r", encoding="utf-8-sig") as in_file:
-        in_file.readline()
+        in_file.readline() #remove header
         wimbledon_data = [line.strip().split(",") for line in in_file]
     return wimbledon_data
 
