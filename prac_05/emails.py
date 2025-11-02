@@ -5,9 +5,9 @@ def main():
     email =  input("Email: ")
     while email != "":
         name = extract_name(email)
-        is_name_correct = input(f"Is your name {name}? (Y/N)").strip().lower()
+        check_name = input(f"Is your name {name}? (Y/N)").strip().lower()
 
-        if is_name_correct not in ('', 'y', 'yes'):
+        if check_name not in ('', 'y'):
             name = input("Name: ").title()
 
         email_to_name[email]  = name
