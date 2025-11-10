@@ -11,7 +11,7 @@ def main():
         if choice == "D":
             display_guitars(guitars)
         elif choice == "A":
-            guitars = add_guitars(guitars)
+            add_guitars(guitars)
         else:
             print("Invalid menu option")
         print(MENU)
@@ -41,7 +41,16 @@ def display_guitars(guitars):
         print(f"Guitar {i}: {guitar}")
 
 def add_guitars(guitars):
-    return guitars
+    print("Add a new guitar (blank name to stop):")
+    name = input("Name:")
+    while name != "":
+        year = int(input("Year:"))
+        cost = float(input("Cost:"))
+        guitar = Guitar(name, year, cost)
+        guitars.append(guitar)
+        print(f"{guitar} added.")
+        name = input("Name:")
+
 
 main()
 
