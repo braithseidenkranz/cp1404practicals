@@ -7,6 +7,6 @@ my_car.drive(18)
 fare = my_car.get_fare()
 print(my_car)
 print(f"Fare for 18 km trip: ${fare}")
-assert fare - 48.78 == 0.0, "Fare should be $48.78"
-
+#assert fare - 48.78 == 0.0, "Fare should be $48.78" (before rounding)
+assert fare - 48.80 == 0.0, "Fare should be $48.80" #after rounding
 
