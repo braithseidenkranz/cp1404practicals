@@ -15,12 +15,7 @@ class MilesKmApp(App):
         return self.root
 
     def handle_increment(self, change):
-        text = self.root.ids.input_miles.text
-
-        try:
-            value = float(text)
-        except ValueError:
-            value = 0
+        value = self.get_valid_miles()
 
         value += change
         self.root.ids.input_miles.text = str(value)
@@ -28,15 +23,16 @@ class MilesKmApp(App):
         self.handle_convert()
 
     def handle_convert(self):
-        text = self.root.ids.input_miles.text
-
-        try:
-            miles = float(text)
-        except ValueError:
-            miles = 0
+        miles = self.get_valid_miles()
 
         km = miles * MILES_TO_KM
         self.output_km = f"{km}"
+
+    def get_valid_miles(self):
+        try:
+            return float(self.root.ids.input_miles.text)
+        except ValueError:
+            return 0.0
 
 
 MilesKmApp().run()
