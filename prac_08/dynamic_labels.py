@@ -2,7 +2,7 @@ from kivy.app import App
 from kivy.lang import Builder
 from kivy.uix.label import Label
 
-class DynamicLabelsApss(App):
+class DynamicLabelsApp(App):
 
     def __init__(self, **kwargs):
         super().__init__(**kwargs)
@@ -18,4 +18,4 @@ class DynamicLabelsApss(App):
 
         return self.root
 
-DynamicLabelsApss().run()
+DynamicLabelsApp().run()
